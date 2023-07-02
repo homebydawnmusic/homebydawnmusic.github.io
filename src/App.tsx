@@ -1,7 +1,7 @@
 import { ChakraBaseProvider } from "@chakra-ui/react";
 import * as React from "react";
-import "./App.css";
-import { Navbar } from "./components/Navbar";
+import "./index.css";
+import { Navbar } from "./components/navbar/Navbar";
 
 const App: React.FC = () => {
   let content: JSX.Element[] = [];
@@ -12,6 +12,7 @@ const App: React.FC = () => {
   return (
     <ChakraBaseProvider>
       <Navbar />
+      {content}
     </ChakraBaseProvider>
   );
 };
