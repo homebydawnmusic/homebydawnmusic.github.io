@@ -1,7 +1,7 @@
 import { ChakraBaseProvider } from "@chakra-ui/react";
 import * as React from "react";
-import "./index.css";
-import { Navbar } from "./components/navbar/Navbar";
+import { Navbar } from "./components/Navbar";
+import "./styles/index.scss";
 
 const App: React.FC = () => {
   let content: JSX.Element[] = [];

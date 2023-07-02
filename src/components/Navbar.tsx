@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import "./Navbar.css";
+import "../styles/index.scss";
 
 export const Navbar: React.FC = () => {
   const [isSectionButtonGroupHovered, setIsSectionButtonGroupHovered] =
