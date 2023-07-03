@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Stack } from "@chakra-ui/react";
+import { Box, Heading, Stack } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
 export interface SectionProps {
@@ -8,16 +8,14 @@ export interface SectionProps {
 }
 
 export const Section: React.FC<SectionProps> = (props: SectionProps) => (
-  <section title={props.name}>
-    <Center>
-      <Stack>
-        <Box margin="16">
-          <Heading as="h1" size="2xl">
-            {props.title}
-          </Heading>
-        </Box>
+  <section id={props.name}>
+    <Box padding="16">
+      <Stack spacing="16">
+        <Heading as="h1" size="2xl" textAlign="center">
+          {props.title}
+        </Heading>
         {props.children}
       </Stack>
-    </Center>
+    </Box>
   </section>
 );

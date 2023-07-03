@@ -5,7 +5,11 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e8e1d4;
+  background-color: #f3f0e7;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 code {
