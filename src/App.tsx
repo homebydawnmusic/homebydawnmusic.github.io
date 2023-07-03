@@ -1,18 +1,23 @@
-import { ChakraBaseProvider } from "@chakra-ui/react";
+import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
+import chakraTheme from "@chakra-ui/theme";
 import * as React from "react";
+import { Contact } from "./components/Contact";
 import { Navbar } from "./components/Navbar";
 import "./styles/index.scss";
 
-const App: React.FC = () => {
-  let content: JSX.Element[] = [];
-  for (let i = 0; i < 100; i++) {
-    content.push(<p>hi</p>);
-  }
+const { Heading } = chakraTheme.components;
 
+const theme = extendBaseTheme({
+  components: {
+    Heading,
+  },
+});
+
+const App: React.FC = () => {
   return (
-    <ChakraBaseProvider>
+    <ChakraBaseProvider theme={theme}>
       <Navbar />
-      {content}
+      <Contact />
     </ChakraBaseProvider>
   );
 };
