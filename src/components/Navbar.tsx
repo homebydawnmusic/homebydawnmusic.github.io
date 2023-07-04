@@ -99,7 +99,7 @@ export const Navbar: React.FC = () => {
             transition=".2s"
           >
             <Link href="/">
-              <Image src="/hbd_logo.png" />
+              <Image src="/hbd_logo_black_small.png" />
             </Link>
           </Box>
 
