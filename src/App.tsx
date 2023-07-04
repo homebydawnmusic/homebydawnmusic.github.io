@@ -3,6 +3,7 @@ import chakraTheme from "@chakra-ui/theme";
 import * as React from "react";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Home } from "./components/Home";
 import { Music } from "./components/Music";
 import { Navbar } from "./components/Navbar";
 import "./styles/index.scss";
@@ -19,6 +20,7 @@ const App: React.FC = () => {
   return (
     <ChakraBaseProvider theme={theme}>
       <Navbar />
+      <Home />
       <Music />
       <About />
       <Contact />

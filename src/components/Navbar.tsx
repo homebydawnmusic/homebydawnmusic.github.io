@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   return (
-    <Box padding="4" borderBottom="1px" borderColor="gray">
+    <Box padding="4">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
