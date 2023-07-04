@@ -3,12 +3,10 @@ import React, { useEffect, useState } from "react";
 
 export const Home: React.FC = () => {
   const [isGifActive, setIsGifActive] = useState(true);
-  const [isPngActive, setIsPngActive] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIsGifActive(false);
-      setIsPngActive(true);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -36,7 +34,7 @@ export const Home: React.FC = () => {
             src="/hbd_logo_white.png"
             alt="Home By Dawn logo"
             backgroundColor="inherit"
-            style={isPngActive ? {} : { display: "none" }}
+            style={isGifActive ? { display: "none" } : {}}
           />
         </Box>
       </Flex>
