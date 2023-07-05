@@ -15,7 +15,7 @@ export const Music: React.FC = () => {
   const [isYouTubeIconHovered, setIsYouTubeIconHovered] = useState(false);
 
   return (
-    <Section name="music" title="[ Music ]">
+    <Section name="music" title="[ MUSIC ]">
       <Flex justifyContent="center">
         <ButtonGroup
           spacing="8"

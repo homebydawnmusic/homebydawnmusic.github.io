@@ -20,15 +20,15 @@ export const MobileNavbar: React.FC = () => {
   const MOBILE_BUTTONS = [
     {
       section: "#music",
-      name: "[ Music ]",
+      name: "[ MUSIC ]",
     },
     {
       section: "#about",
-      name: "[ About ]",
+      name: "[ ABOUT ]",
     },
     {
       section: "#contact",
-      name: "[ Contact ]",
+      name: "[ CONTACT ]",
     },
   ];
 

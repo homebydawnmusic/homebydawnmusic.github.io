@@ -1,24 +1,15 @@
-import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
-import chakraTheme from "@chakra-ui/theme";
+import { ChakraBaseProvider } from "@chakra-ui/react";
 import * as React from "react";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { FadeInMotion } from "./components/FadeInMotion";
 import { Home } from "./components/Home";
 import { Music } from "./components/Music";
 import { Navbar } from "./components/Navbar";
 import "./styles/index.scss";
-import { FadeInMotion } from "./components/FadeInMotion";
-
-const { Heading } = chakraTheme.components;
-
-const theme = extendBaseTheme({
-  components: {
-    Heading,
-  },
-});
 
 const App: React.FC = () => (
-  <ChakraBaseProvider theme={theme}>
+  <ChakraBaseProvider>
     <FadeInMotion duration={1} delay={0}>
       <Navbar />
     </FadeInMotion>

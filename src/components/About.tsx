@@ -3,7 +3,7 @@ import React from "react";
 import { Section } from "./Section";
 
 export const About: React.FC = () => (
-  <Section name="about" title="[ About ]">
+  <Section name="about" title="[ ABOUT ]">
     <Flex justifyContent="center">
       <Box width="90%" maxWidth="864px">
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing="16">
@@ -12,7 +12,7 @@ export const About: React.FC = () => (
             src="/hbd_avatar.jpg"
             alt="Home By Dawn avatar"
           />
-          <Text fontSize="md">
+          <Text fontSize="lg">
             Home By Dawn is a youthful and energetic music producer from Los
             Angeles. Since launching his career in 2022, he is already breaking
             through the electronic dance community with a motive to continue

@@ -11,7 +11,11 @@ export const Section: React.FC<SectionProps> = (props: SectionProps) => (
   <section id={props.name}>
     <Box padding="16">
       <Stack spacing="16">
-        <Heading as="h1" size="2xl" textAlign="center">
+        <Heading
+          as="h1"
+          fontSize={{ base: "4xl", sm: "5xl" }}
+          textAlign="center"
+        >
           {props.title}
         </Heading>
         {props.children}

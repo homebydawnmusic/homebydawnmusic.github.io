@@ -14,19 +14,19 @@ export const DesktopNavbar: React.FC = () => {
   const DESKTOP_BUTTONS = [
     {
       section: "#music",
-      name: "[ Music ]",
+      name: "[ MUSIC ]",
       state: isMusicButtonHovered,
       setter: setIsMusicButtonHovered,
     },
     {
       section: "#about",
-      name: "[ About ]",
+      name: "[ ABOUT ]",
       state: isAboutButtonHovered,
       setter: setIsAboutButtonHovered,
     },
     {
       section: "#contact",
-      name: "[ Contact ]",
+      name: "[ CONTACT ]",
       state: isContactButtonHovered,
       setter: setIsContactButtonHovered,
     },
