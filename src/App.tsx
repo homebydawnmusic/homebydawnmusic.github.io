@@ -1,4 +1,4 @@
-import { ChakraBaseProvider } from "@chakra-ui/react";
+import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import * as React from "react";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
@@ -6,10 +6,27 @@ import { FadeInMotion } from "./components/FadeInMotion";
 import { Home } from "./components/Home";
 import { Music } from "./components/Music";
 import { Navbar } from "./components/Navbar";
-import "./styles/index.scss";
+
+const theme = extendBaseTheme({
+  styles: {
+    global: {
+      "*": {
+        boxSizing: "border-box",
+      },
+      "html, body": {
+        backgroundColor: "#f3f0e7",
+        scrollBehavior: "smooth",
+        fontFamily: "'Inconsolata', sans-serif",
+      },
+      h1: {
+        fontFamily: "'Instrument Sans', sans-serif",
+      },
+    },
+  },
+});
 
 const App: React.FC = () => (
-  <ChakraBaseProvider>
+  <ChakraBaseProvider theme={theme}>
     <FadeInMotion duration={1} delay={0}>
       <Navbar />
     </FadeInMotion>

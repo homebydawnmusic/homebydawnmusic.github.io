@@ -15,12 +15,24 @@ export const Contact: React.FC = () => {
   const [isMailButtonHovered, setIsMailButtonHovered] = useState(false);
 
   return (
-    <Section name="contact" title="[ CONTACT ]">
-      <Box height="40vh">
+    <Section
+      name="contact"
+      title="[ CONTACT ]"
+      textColor="#f3f0e7"
+      backgroundImage="./hbd_contact.png"
+      backgroundPosition="center"
+    >
+      <Box height="70vh">
         <Flex height="100%" alignItems="center" justifyContent="center">
           <VStack spacing="8">
-            <SocialIconGroup size="2x" />
-            <Heading as="h2" fontSize="2xl" fontWeight="bold">
+            <SocialIconGroup size="2x" color="#f3f0e7" />
+            <Heading
+              as="h2"
+              textColor="#f3f0e7"
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+            >
               Booking and Inquiries
             </Heading>
             <Link href="mailto:homebydawnmusic@gmail.com">
@@ -30,7 +42,9 @@ export const Contact: React.FC = () => {
                 onMouseLeave={() => setIsMailButtonHovered(false)}
                 transition=".2s"
               >
-                <Text fontSize="lg">homebydawnmusic@gmail.com</Text>
+                <Text textColor="#f3f0e7" fontSize="lg">
+                  homebydawnmusic@gmail.com
+                </Text>
               </Button>
             </Link>
           </VStack>

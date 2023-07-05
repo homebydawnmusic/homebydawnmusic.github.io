@@ -17,23 +17,16 @@ export const Home: React.FC = () => {
       backgroundImage="./hbd_home.png"
       backgroundPosition="center"
     >
-      <Flex
-        height="100%"
-        justifyContent="center"
-        alignItems="center"
-        backgroundColor="transparent"
-      >
-        <Box width="90%" maxWidth="864px" backgroundColor="inherit">
+      <Flex height="100%" justifyContent="center" alignItems="center">
+        <Box width="90%" maxWidth="864px">
           <Image
             src="/hbd_logo_white.gif"
             alt="Home By Dawn logo"
-            backgroundColor="inherit"
             style={isGifActive ? {} : { display: "none" }}
           />
           <Image
             src="/hbd_logo_white.png"
             alt="Home By Dawn logo"
-            backgroundColor="inherit"
             style={isGifActive ? { display: "none" } : {}}
           />
         </Box>

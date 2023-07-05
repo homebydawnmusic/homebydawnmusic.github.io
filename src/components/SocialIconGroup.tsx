@@ -12,6 +12,7 @@ import React, { useState } from "react";
 
 interface SocialIconGroupProps {
   size?: SizeProp;
+  color?: string;
 }
 
 export const SocialIconGroup: React.FC<SocialIconGroupProps> = (
@@ -27,66 +28,66 @@ export const SocialIconGroup: React.FC<SocialIconGroupProps> = (
 
   const size = props.size ?? "sm";
 
+  const SOCIALS = [
+    {
+      link: "https://facebook.com/homebydawnmusic",
+      icon: faFacebookF,
+      size: size,
+      state: isFacebookIconHovered,
+      setter: setIsFacebookIconHovered,
+    },
+    {
+      link: "https://twitter.com/homebydawnmusic",
+      icon: faTwitter,
+      size: size,
+      state: isTwitterIconHovered,
+      setter: setIsTwitterIconHovered,
+    },
+    {
+      link: "https://instagram.com/homebydawnmusic",
+      icon: faInstagram,
+      size: size,
+      state: isInstagramIconHovered,
+      setter: setIsInstagramIconHovered,
+    },
+    {
+      link: "https://youtube.com/@homebydawnmusic",
+      icon: faYoutube,
+      size: size,
+      state: isYouTubeIconHovered,
+      setter: setIsYouTubeIconHovered,
+    },
+    {
+      link: "https://tiktok.com/@homebydawnmusic",
+      icon: faTiktok,
+      size: size,
+      state: isTikTokIconHovered,
+      setter: setIsTikTokIconHovered,
+    },
+  ];
+
   return (
     <ButtonGroup
       spacing="8"
       onMouseEnter={() => setIsSocialIconGroupHovered(true)}
       onMouseLeave={() => setIsSocialIconGroupHovered(false)}
     >
-      <Box
-        opacity={
-          !isSocialIconGroupHovered || isFacebookIconHovered ? "1" : ".5"
-        }
-        onMouseEnter={() => setIsFacebookIconHovered(true)}
-        onMouseLeave={() => setIsFacebookIconHovered(false)}
-        transition=".2s"
-      >
-        <Link href="https://facebook.com/homebydawnmusic" target="_blank">
-          <FontAwesomeIcon icon={faFacebookF} size={size} />
-        </Link>
-      </Box>
-      <Box
-        opacity={!isSocialIconGroupHovered || isTwitterIconHovered ? "1" : ".5"}
-        onMouseEnter={() => setIsTwitterIconHovered(true)}
-        onMouseLeave={() => setIsTwitterIconHovered(false)}
-        transition=".2s"
-      >
-        <Link href="https://twitter.com/homebydawnmusic" target="_blank">
-          <FontAwesomeIcon icon={faTwitter} size={size} />
-        </Link>
-      </Box>
-      <Box
-        opacity={
-          !isSocialIconGroupHovered || isInstagramIconHovered ? "1" : ".5"
-        }
-        onMouseEnter={() => setIsInstagramIconHovered(true)}
-        onMouseLeave={() => setIsInstagramIconHovered(false)}
-        transition=".2s"
-      >
-        <Link href="https://instagram.com/homebydawnmusic" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} size={size} />
-        </Link>
-      </Box>
-      <Box
-        opacity={!isSocialIconGroupHovered || isYouTubeIconHovered ? "1" : ".5"}
-        onMouseEnter={() => setIsYouTubeIconHovered(true)}
-        onMouseLeave={() => setIsYouTubeIconHovered(false)}
-        transition=".2s"
-      >
-        <Link href="https://youtube.com/@homebydawnmusic" target="_blank">
-          <FontAwesomeIcon icon={faYoutube} size={size} />
-        </Link>
-      </Box>
-      <Box
-        opacity={!isSocialIconGroupHovered || isTikTokIconHovered ? "1" : ".5"}
-        onMouseEnter={() => setIsTikTokIconHovered(true)}
-        onMouseLeave={() => setIsTikTokIconHovered(false)}
-        transition=".2s"
-      >
-        <Link href="https://tiktok.com/@homebydawnmusic" target="_blank">
-          <FontAwesomeIcon icon={faTiktok} size={size} />
-        </Link>
-      </Box>
+      {SOCIALS.map((social) => (
+        <Box
+          opacity={!isSocialIconGroupHovered || social.state ? "1" : ".5"}
+          onMouseEnter={() => social.setter(true)}
+          onMouseLeave={() => social.setter(false)}
+          transition=".2s"
+        >
+          <Link href={social.link} target="_blank">
+            <FontAwesomeIcon
+              icon={social.icon}
+              size={size}
+              color={props.color ?? ""}
+            />
+          </Link>
+        </Box>
+      ))}
     </ButtonGroup>
   );
 };
