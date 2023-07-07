@@ -16,9 +16,9 @@ export const Section: React.FC<SectionProps> = (props: SectionProps) => (
       padding="16"
       backgroundImage={props.backgroundImage ?? ""}
       backgroundPosition={props.backgroundPosition ?? ""}
-      minHeight="100vh"
-      minWidth="100vw"
       backgroundSize="cover"
+      minHeight={props.backgroundImage ? "100vh" : ""}
+      minWidth={props.backgroundImage ? "100vw" : ""}
     >
       <Stack spacing="16">
         <Heading

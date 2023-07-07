@@ -17,6 +17,7 @@ const theme = extendBaseTheme({
         backgroundColor: "#f3f0e7",
         scrollBehavior: "smooth",
         fontFamily: "'Inconsolata', sans-serif",
+        overflowX: "hidden",
       },
       h1: {
         fontFamily: "'Instrument Sans', sans-serif",
