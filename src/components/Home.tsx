@@ -16,6 +16,9 @@ export const Home: React.FC = () => {
       height="100vh"
       backgroundImage="./hbd_home.png"
       backgroundPosition="center"
+      minHeight="100vh"
+      minWidth="100vw"
+      backgroundSize="cover"
     >
       <Flex height="100%" justifyContent="center" alignItems="center">
         <Box width="90%" maxWidth="864px">
