@@ -7,7 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { MediaPlayer } from "./MediaPlayer";
-import { Section } from "./Section";
+import { Section } from "../common/Section";
 
 export const Music: React.FC = () => {
   const [isButtonGroupHovered, setIsButtonGroupHovered] = useState(false);

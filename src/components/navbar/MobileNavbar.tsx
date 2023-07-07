@@ -12,7 +12,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import { SocialIconGroup } from "./SocialIconGroup";
+import { SocialIconGroup } from "../common/SocialIconGroup";
 
 export const MobileNavbar: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();

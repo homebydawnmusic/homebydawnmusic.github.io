@@ -8,8 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Section } from "./Section";
-import { SocialIconGroup } from "./SocialIconGroup";
+import { Section } from "../common/Section";
+import { SocialIconGroup } from "../common/SocialIconGroup";
 
 export const Contact: React.FC = () => {
   const [isMailButtonHovered, setIsMailButtonHovered] = useState(false);

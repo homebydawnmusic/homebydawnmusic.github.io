@@ -1,11 +1,11 @@
 import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import * as React from "react";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { FadeInMotion } from "./components/FadeInMotion";
-import { Home } from "./components/Home";
-import { Music } from "./components/Music";
-import { Navbar } from "./components/Navbar";
+import { About } from "./components/about/About";
+import { Contact } from "./components/contact/Contact";
+import { FadeInMotion } from "./components/common/FadeInMotion";
+import { Home } from "./components/home/Home";
+import { Music } from "./components/music/Music";
+import { Navbar } from "./components/navbar/Navbar";
 
 const theme = extendBaseTheme({
   styles: {

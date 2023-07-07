@@ -1,6 +1,6 @@
 import { Box, Button, ButtonGroup, Flex, Image, Link } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { SocialIconGroup } from "./SocialIconGroup";
+import { SocialIconGroup } from "../common/SocialIconGroup";
 
 export const DesktopNavbar: React.FC = () => {
   const [isSectionButtonGroupHovered, setIsSectionButtonGroupHovered] =

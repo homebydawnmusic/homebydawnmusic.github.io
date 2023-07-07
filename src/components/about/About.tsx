@@ -1,6 +1,6 @@
 import { Box, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import { Section } from "./Section";
+import { Section } from "../common/Section";
 
 export const About: React.FC = () => (
   <Section name="about" title="[ ABOUT ]">
