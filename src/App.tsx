@@ -20,7 +20,7 @@ const theme = extendBaseTheme({
         overflowX: "hidden",
       },
       h1: {
-        fontFamily: "'Instrument Sans', sans-serif",
+        fontFamily: "'Reem Kufi Ink', sans-serif",
       },
     },
   },
