@@ -18,7 +18,7 @@ export const Music: React.FC = () => {
   return (
     <Section name="music" title="[ MUSIC ]">
       <Flex justifyContent="center">
-        <VStack spacing="16">
+        <VStack spacing={[8, 8, 16]}>
           <ButtonGroup
             spacing="8"
             onMouseEnter={() => setIsButtonGroupHovered(true)}

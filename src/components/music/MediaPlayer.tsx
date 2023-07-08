@@ -31,7 +31,7 @@ const DesktopMediaPlayer: React.FC = () => (
 );
 
 const MobileMediaPlayer: React.FC = () => (
-  <VStack spacing="16" height="100%">
+  <VStack spacing="8" height="100%">
     <SpotifyAndSoundcloud isSpotifyWide soundCloudPlayerHeight="40vh" />
   </VStack>
 );

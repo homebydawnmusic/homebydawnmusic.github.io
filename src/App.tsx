@@ -1,8 +1,8 @@
 import { ChakraBaseProvider, extendBaseTheme } from "@chakra-ui/react";
 import * as React from "react";
 import { About } from "./components/about/About";
-import { Contact } from "./components/contact/Contact";
 import { FadeInMotion } from "./components/common/FadeInMotion";
+import { Contact } from "./components/contact/Contact";
 import { Home } from "./components/home/Home";
 import { Music } from "./components/music/Music";
 import { Navbar } from "./components/navbar/Navbar";
@@ -45,4 +45,5 @@ const App: React.FC = () => (
     </FadeInMotion>
   </ChakraBaseProvider>
 );
+
 export default App;
