@@ -5,7 +5,7 @@ import { Section } from "../common/Section";
 export const About: React.FC = () => (
   <Section name="about" title="[ ABOUT ]">
     <Flex justifyContent="center">
-      <Box width="90%" maxWidth="864px">
+      <Box width="80vw" maxWidth="864px">
         <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={[8, 8, 16]}>
           <Image
             borderRadius="full"
