@@ -49,18 +49,20 @@ export const DesktopNavbar: React.FC = () => {
             onMouseLeave={() => setIsSectionButtonGroupHovered(false)}
           >
             {DESKTOP_BUTTONS.map((button) => (
-              <Link href={button.section}>
-                <Button
-                  opacity={
-                    !isSectionButtonGroupHovered || button.state ? "1" : ".5"
-                  }
-                  onMouseEnter={() => button.setter(true)}
-                  onMouseLeave={() => button.setter(false)}
-                  transition=".2s"
-                >
-                  {button.name}
-                </Button>
-              </Link>
+              <Box key={button.name}>
+                <Link href={button.section}>
+                  <Button
+                    opacity={
+                      !isSectionButtonGroupHovered || button.state ? "1" : ".5"
+                    }
+                    onMouseEnter={() => button.setter(true)}
+                    onMouseLeave={() => button.setter(false)}
+                    transition=".2s"
+                  >
+                    {button.name}
+                  </Button>
+                </Link>
+              </Box>
             ))}
           </ButtonGroup>
         </Box>

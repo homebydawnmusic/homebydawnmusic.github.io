@@ -74,6 +74,7 @@ export const SocialIconGroup: React.FC<SocialIconGroupProps> = (
     >
       {SOCIALS.map((social) => (
         <Box
+          key={social.link}
           opacity={!isSocialIconGroupHovered || social.state ? "1" : ".5"}
           onMouseEnter={() => social.setter(true)}
           onMouseLeave={() => social.setter(false)}

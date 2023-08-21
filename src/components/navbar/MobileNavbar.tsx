@@ -91,13 +91,15 @@ export const MobileNavbar: React.FC = () => {
           <VStack spacing="6">
             <VStack spacing="4">
               {MOBILE_BUTTONS.map((button) => (
-                <Link key={button.name} href={button.section}>
-                  <Button onClick={onToggle}>
-                    <Text as="h2" fontSize="xl">
-                      {button.name}
-                    </Text>
-                  </Button>
-                </Link>
+                <Box key={button.name}>
+                  <Link key={button.name} href={button.section}>
+                    <Button onClick={onToggle}>
+                      <Text as="h2" fontSize="xl">
+                        {button.name}
+                      </Text>
+                    </Button>
+                  </Link>
+                </Box>
               ))}
             </VStack>
             <SocialIconGroup size="lg" />
