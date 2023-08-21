@@ -11,7 +11,9 @@ import React, { useState } from "react";
 import { Section } from "../common/Section";
 import { SocialIconGroup } from "../common/SocialIconGroup";
 
-export const Contact: React.FC = () => {
+export interface ContactProps {}
+
+export const Contact: React.FC<ContactProps> = (props: ContactProps) => {
   const [isMailButtonHovered, setIsMailButtonHovered] = useState(false);
 
   return (

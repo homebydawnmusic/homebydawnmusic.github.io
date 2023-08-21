@@ -1,7 +1,11 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 
-export const Home: React.FC = () => {
+export interface HomeProps {
+  handleLoad: () => void;
+}
+
+export const Home: React.FC<HomeProps> = (props: HomeProps) => {
   const [isGifActive, setIsGifActive] = useState(true);
 
   useEffect(() => {
@@ -19,6 +23,7 @@ export const Home: React.FC = () => {
       minHeight="100vh"
       minWidth="100vw"
       backgroundSize="cover"
+      onLoad={props.handleLoad}
     >
       <Flex height="100%" justifyContent="center" alignItems="center">
         <Box width="90%" maxWidth="864px">

@@ -2,7 +2,11 @@ import { Box, Flex, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { Section } from "../common/Section";
 
-export const About: React.FC = () => (
+export interface AboutProps {
+  handleLoad: () => void;
+}
+
+export const About: React.FC<AboutProps> = (props: AboutProps) => (
   <Section name="about" title="[ ABOUT ]">
     <Flex justifyContent="center">
       <Box width="80vw" maxWidth="864px">
@@ -11,6 +15,7 @@ export const About: React.FC = () => (
             borderRadius="full"
             src="/hbd_avatar.jpg"
             alt="Home By Dawn avatar"
+            onLoad={props.handleLoad}
           />
           <Text fontSize="lg">
             Home By Dawn is a youthful and energetic music producer from Los
